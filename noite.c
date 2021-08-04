@@ -17,6 +17,7 @@ typedef struct elemento
 {
 	char nome[100];
 	int vale;
+  float valorVale;
 	int planoSaude;
 	float salario;
 	float gratificacao;
@@ -126,15 +127,37 @@ void cadastrarFuncionario(){
   scanf("%d", &fun->dependentes);
 }
 
-void calcularValeTransporte()
+void calcularValeTransporte(funcionario fun){
+ 
+  if(fun->vale == 1) {
+    
+  }else {
+
+  }
+}
+
+void calcularPlano()
 {
 
 }
 
-void calcul
+void calcularFgts() {
 
-void calcularPlano()
-{
+}
+
+void calcularInss() {
+
+}
+
+void calcularSalarioFamilia() {
+
+}
+
+void calcularIR() {
+
+}
+
+void calcularSalarioLiquido() {
 
 }
 
