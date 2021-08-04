@@ -19,7 +19,7 @@ typedef struct elemento
 	int vale;
   float valorVale;
 	int planoSaude;
-	float salario;
+	float salarioBruto;
 	float gratificacao;
 	int dependentes;
 	struct elemento* prox;
@@ -130,7 +130,7 @@ void cadastrarFuncionario(){
 void calcularValeTransporte(funcionario fun){
  
   if(fun->vale == 1) {
-    
+      fun->valorVale = salario * 0.06
   }else {
 
   }
