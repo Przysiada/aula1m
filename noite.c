@@ -25,10 +25,32 @@ void main()
     switch (op)
     {
     case 'A':
-      versalario();
-      break;
-    case
-    
+        versalario();
+        break;
+    case 'B':
+
+        break;
+    case 'C':
+        
+        break;
+    case 'D':
+        
+        break;
+    case 'E':
+        
+        break;
+    case 'F':
+        
+        break;
+    case 'G':
+        
+        break;
+    case 'H':
+        
+        break;
+    case 'I':
+        
+        break;
     default:
       printf("ERRO : Voce escreveu errado usuario burro\n");
       break;
@@ -38,15 +60,15 @@ void main()
 
 void menu(){
   const 
-  printf("Cadastrar funcionario\n");
-  printf("Imprimir funcionarios\n");
-  printf("Calcular VT\n");
-  printf("Calcular plano de saúde\n");
-  printf("Calcular o FGTS\n");
-  printf("Calcular o INSS\n");
-  printf("Calcular o salario familia\n");
-  printf("Calcular o IR\n");
-  printf("Calcular o Salario liquido");
-  printf("X - Sair");
+  printf("A - Cadastrar funcionario\n");
+  printf("B - Imprimir funcionarios\n");
+  printf("C - Calcular VT\n");
+  printf("D - Calcular plano de saúde\n");
+  printf("E - Calcular o FGTS\n");
+  printf("F - Calcular o INSS\n");
+  printf("G - Calcular o salario familia\n");
+  printf("H - Calcular o IR\n");
+  printf("I - Calcular o Salario liquido");
+  printf("%c - Sair", OP_SAIR);
 
 }
