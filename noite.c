@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define OP_CADASTRAR 1
 #define OP_IMPRIMIR 2
@@ -20,6 +21,7 @@ typedef struct elemento
 	float salario;
 	float gratificacao;
 	int dependentes;
+	struct elemento* prox;
 } funcionario;
 
 void menu();
@@ -30,6 +32,8 @@ void main()
   char op = '0';
   printf("Bem vindo ao sistema\n");
 
+  funcionario* elemento = NULL;
+
   while(op != OP_SAIR)
   {
 
@@ -39,30 +43,37 @@ void main()
     case OP_CADASTRAR:
         cadastrarFuncionario();
         break;
+
     case OP_IMPRIMIR:
         imprimirFuncionario();
         break;
+
     case OP_CALC_VT:
         calcular();
         break;
+
     case OP_CALC_SAUDE:
         calcularPlanoDeSaude();
         break;
+
     case OP_CALC_FGTS:
         calcularFgts();
         break;
+
     case OP_CALC_INSS:
         calcularInss();
         break;
+
     case OP_CALC_SAL_FAM:
-        
         break;
+
     case OP_CALC_IR:
         
         break;
     case OP_CALC_SAL_LIQ:
-        
+
         break;
+
     default:
       printf("ERRO : Voce escreveu errado usuario burro\n");
       break;
@@ -86,16 +97,20 @@ void menu(){
 void cadastrarFuncionario(){
   char[100] nome;
   funcionario *fun
-  int vale, plano, numeroDependentes;
-  float salarioBruto, salarioExtra, salario;
 
   printf("Entre com o nome do funcionario:\n");
-  scanf("%s", nome);
+  scanf("%s", &nome);
+  strcpy(fun->nome, nome);
   printf("Se possui o vale transporte (1) Sim (2) Não");
   scanf("%d", &fun->vale);
   printf("Se vai utilizar plano de saude (1) Sim (2) Não");
-  scanf("%d", &plano);
+  scanf("%d", &fun->plano);
+
   printf("Quantidade de salario extra: \n");
-  scanf("%f", salarioExtra);
-  printf("")
+  scanf("%f", &fun->salarioExtra);
+  printf("Entre com salario bruto: \n");
+  scanf("%f", &fun->salarioBruto);
+  printf("Entre com quantidade de dependentes: \n");
+  scanf("%d", &fun->dependentes);
+
 }
