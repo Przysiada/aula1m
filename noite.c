@@ -26,6 +26,8 @@ typedef struct elemento
 
 void menu();
 void cadastrarFuncionario();
+void adicionarUsuario();
+void calcularPlano()
 
 void main()
 {
@@ -36,6 +38,8 @@ void main()
 
   while(op != OP_SAIR)
   {
+
+    menu();
 
     scanf("%c", &op);
     switch (op)
@@ -96,21 +100,46 @@ void menu(){
 
 void cadastrarFuncionario(){
   char[100] nome;
+  int grat;
   funcionario *fun
 
   printf("Entre com o nome do funcionario:\n");
   scanf("%s", &nome);
   strcpy(fun->nome, nome);
-  printf("Se possui o vale transporte (1) Sim (2) Não");
+  printf("Se possui o vale transporte (1) Sim (0) Não");
   scanf("%d", &fun->vale);
-  printf("Se vai utilizar plano de saude (1) Sim (2) Não");
+  printf("Se vai utilizar plano de saude (1) Sim (0) Não");
   scanf("%d", &fun->plano);
 
-  printf("Quantidade de salario extra: \n");
-  scanf("%f", &fun->salarioExtra);
+  printf("Possui gratificação? (1) Sim (0) Não");
+  scanf("%d", &grat);
+
+  if(grat == 1)
+  {
+    printf("Entre com o valor: ");
+    scanf("%f", &fun->gratificacao);
+  }
+
   printf("Entre com salario bruto: \n");
   scanf("%f", &fun->salarioBruto);
   printf("Entre com quantidade de dependentes: \n");
   scanf("%d", &fun->dependentes);
+}
 
+void calcularValeTransporte()
+{
+
+}
+
+void calcul
+
+void calcularPlano()
+{
+
+}
+
+
+void adicionarUsuario()
+{
+  
 }
