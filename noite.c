@@ -29,11 +29,11 @@ typedef struct elemento
 void menu();
 void cadastrarFuncionario();
 void adicionarUsuario();
-void calcularPlano()
+void calcularPlano();
 
 void main()
 {
-  char op = '0';
+  int op = -1;
   printf("Bem vindo ao sistema\n");
 
   funcionario* elemento = NULL;
@@ -84,10 +84,11 @@ void main()
       printf("ERRO : Voce escreveu errado usuario burro\n");
       break;
     }
-  
+  }
 }
 
-void menu(){
+void menu()
+{
   printf("%d - Cadastrar funcionario\n", OP_CADASTRAR);
   printf("%d - Imprimir funcionarios\n", OP_IMPRIMIR);
   printf("%d - Calcular VT\n", OP_CALC_VT);
@@ -101,9 +102,9 @@ void menu(){
 }
 
 void cadastrarFuncionario(){
-  char[100] nome;
+  char nome[100];
   int grat;
-  funcionario *fun
+  funcionario *fun;
 
   printf("Entre com o nome do funcionario:\n");
   scanf("%s", &nome);
@@ -111,7 +112,7 @@ void cadastrarFuncionario(){
   printf("Se possui o vale transporte (1) Sim (0) Não");
   scanf("%d", &fun->vale);
   printf("Se vai utilizar plano de saude (1) Sim (0) Não");
-  scanf("%d", &fun->plano);
+  scanf("%d", &fun->planoSaude);
 
   printf("Possui gratificação? (1) Sim (0) Não");
   scanf("%d", &grat);
@@ -121,7 +122,7 @@ void cadastrarFuncionario(){
     printf("Entre com o valor: ");
     scanf("%f", &fun->gratificacao);
   }
-  if(fun->plano == 1)
+  if(fun->planoSaude == 1)
   {
     printf("Qual tipo do plano? (1) Enfermaria (0) Quarto");
     scanf("%f", &fun->gratificacao);
@@ -133,10 +134,10 @@ void cadastrarFuncionario(){
   scanf("%d", &fun->dependentes);
 }
 
-void calcularValeTransporte(funcionario fun){
+void calcularValeTransporte(funcionario *fun){
   
-  float valorVale = 198f;
-  float valorValeCalculado = 0f;
+  float valorVale = 198.f;
+  float valorValeCalculado = 0.f;
 
   if(fun->vale == 1) { 
 
