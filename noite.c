@@ -19,6 +19,7 @@ typedef struct elemento
 	int vale;
   float valorVale;
 	int planoSaude;
+  int tipoPlanoSaude;
 	float salarioBruto;
 	float gratificacao;
 	int dependentes;
@@ -120,6 +121,11 @@ void cadastrarFuncionario(){
     printf("Entre com o valor: ");
     scanf("%f", &fun->gratificacao);
   }
+  if(fun->plano == 1)
+  {
+    printf("Qual tipo do plano? (1) Enfermaria (0) Quarto");
+    scanf("%f", &fun->gratificacao);
+  }
 
   printf("Entre com salario bruto: \n");
   scanf("%f", &fun->salarioBruto);
@@ -138,7 +144,7 @@ void calcularValeTransporte(funcionario fun){
 
       if(valorValeCalculado >= valorVale) { 
         fun->valorVale = valorVale;
-      }else {
+      } else {
         fun->valorVale = valorValeCalculado;
       }
   }
