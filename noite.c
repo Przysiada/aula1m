@@ -73,8 +73,16 @@ void menu(){
 
 void cadastrarFuncionario(){
   char[100] nome;
+  int vale, plano, numeroDependentes;
+  float salarioBruto, salarioExtra, salario;
 
   printf("Entre com o nome do funcionario:\n");
   scanf("%s", nome);
+  printf("Se possui o vale transporte (1) Sim (2) Não");
+  scanf("%d", &vale);
+  printf("Se vai utilizar plano de saude (1) Sim (2) Não");
+  scanf("%d", &plano);
+  printf("Quantidade de salario extra: \n");
+  scanf("%f", salarioExtra);
   printf("")
 }
