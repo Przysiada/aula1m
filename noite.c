@@ -128,11 +128,19 @@ void cadastrarFuncionario(){
 }
 
 void calcularValeTransporte(funcionario fun){
- 
-  if(fun->vale == 1) {
-      fun->valorVale = salario * 0.06
-  }else {
+  
+  float valorVale = 198f;
+  float valorValeCalculado = 0f;
 
+  if(fun->vale == 1) { 
+
+      valorValeCalculado = fun->salarioBruto * 0.06f;
+
+      if(valorValeCalculado >= valorVale) { 
+        fun->valorVale = valorVale;
+      }else {
+        fun->valorVale = valorValeCalculado;
+      }
   }
 }
 
