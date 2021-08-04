@@ -25,22 +25,22 @@ void main()
     switch (op)
     {
     case 'A':
-        versalario();
+        cadastrarFuncionario();
         break;
     case 'B':
-
+        imprimirFuncionario();
         break;
     case 'C':
-        
+        calcular();
         break;
     case 'D':
-        
+        calcularPlanoDeSaude();
         break;
     case 'E':
-        
+        calcularFgts();
         break;
     case 'F':
-        
+        calcularInss();
         break;
     case 'G':
         
@@ -59,7 +59,6 @@ void main()
 }
 
 void menu(){
-  const 
   printf("A - Cadastrar funcionario\n");
   printf("B - Imprimir funcionarios\n");
   printf("C - Calcular VT\n");
@@ -70,5 +69,12 @@ void menu(){
   printf("H - Calcular o IR\n");
   printf("I - Calcular o Salario liquido");
   printf("%c - Sair", OP_SAIR);
+}
 
+void cadastrarFuncionario(){
+  char[100] nome;
+
+  printf("Entre com o nome do funcionario:\n");
+  scanf("%s", nome);
+  printf("")
 }
